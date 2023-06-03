@@ -1,6 +1,6 @@
 1.Transform.root是脚本挂载对象的根节点，就是最上层的那个。在测试项目中为grandpa
 
-2.分析transform.root.Find和transform.Find两列，可以得出结论，这两种查找方法只能挂载脚本的对象儿子辈的物体，无论儿子辈的物体是否激活。
+2.分析transform.root.Find和transform.Find两列，可以得出结论，这两种查找方法只能挂载脚本的对象的儿子，无论儿子是否激活。
   其余物体（即同辈的，父辈的，爷爷辈的，孙子辈的，重孙子辈的）都找不到，无论是否激活。
 
 3.分析GameObject.Find列，可以得出结论，GameObject.Find可以找到所有已激活的物体（前提是其父物体也是激活状态），
