@@ -6,3 +6,8 @@
 3.分析GameObject.Find列，可以得出结论，GameObject.Find可以找到所有已激活的物体（前提是其父物体也是激活状态），
   所有未激活的物体（及其子物体，无论子物体自身是否激活）都找不到。与辈分无关（即使挂载脚本的对象是孙子辈的，也可以找到爷爷辈的已激活的物体）。
   简单说，就是在GameObject.Find可以找到所有在Hierarchy面板显示激活的所有物体，但是找不到在Hierarchy面板未激活的所有物体。
+
+4.transform.root.Find和transform.Find也找不到侄子们（儿子辈中不是自己儿子的）
+
+5.transform.root.Find如果已经在最上层（辈分最高），则transform.root.Find的值就是脚本挂载对象本身。
+
